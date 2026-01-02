@@ -102,7 +102,7 @@ export const FindMovie: React.FC<Props> = ({
               data-cy="searchButton"
               type="submit"
               className={cl('button is-light', { 'is-loading': load })}
-              disabled={inputValue === '' ? true : false}
+              disabled={inputValue.trim() === '' ? true : false}
             >
               {findedMovie !== null ? 'Search again' : 'Find a movie'}
             </button>

@@ -12,7 +12,7 @@ export const App = () => {
   const [searchDanger, setSearchDanger] = useState(false);
 
   const addMovieHandler = (movie: Movie) => {
-    if (movies.every(el => el.title !== movie.title)) {
+    if (movies.every(el => el.imdbId !== movie.imdbId)) {
       setMovies(currentMovies => [...currentMovies, movie]);
       setSearchDanger(false);
     }
